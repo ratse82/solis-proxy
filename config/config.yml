@@ -1,0 +1,35 @@
+server:
+  # Server listen address (use 0.0.0.0 to listen on all addresses)
+  listen_address: 0.0.0.0
+  # Server listen port
+  listen_port: 10000
+  # Connection timeout
+  connection_timeout: 10
+
+forward:
+  # Enables / disables data forwarding to remote server
+  enabled: false
+  # Primary server address
+  primary_address: data1.solarmanpv.com
+  # Primary server port
+  primary_port: 10000
+  # Secondary server address (used only when primary server is not responding)
+  secondary_address: data2.solarmanpv.com
+  # Secondary server port
+  secondary_port: 10000
+
+mqtt:
+  # Enables / disables data publishing to MQTT broker
+  enabled: false
+  # Topic prefix
+  base_topic: ginlong
+  # Client id
+  client_id: solisproxy
+  # MQTT broker address
+  hostname:
+  # MQTT broker port
+  port: 1883
+  # Username
+  username:
+  # Password
+  password:

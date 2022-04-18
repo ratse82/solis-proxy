@@ -1,0 +1,13 @@
+@startuml solis-proxy
+
+rectangle Inverter
+rectangle "Solis-Proxy" as SolisProxy #lightblue
+rectangle "MQTT Broker" as MQTTBroker
+
+rectangle "Server" as Server
+
+Inverter -> SolisProxy
+SolisProxy -> MQTTBroker : publish\n(json)
+Server <-- SolisProxy : forward\n(raw data)
+
+@enduml
